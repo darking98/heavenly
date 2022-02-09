@@ -1,0 +1,125 @@
+nav{
+    position: fixed;
+    z-index: 999;
+    //border-bottom: 1px solid white;
+    width: 100%;
+    &::after{
+      content: "";
+      height: 1px;
+      border-bottom: 1px solid white;
+      position: absolute;
+      width: 100%;
+      transition: width 500ms ease-in-out;
+    }
+    .nav-container{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 35px 60px;
+      
+    }
+    
+    transition: all 300ms ease-in-out;
+    .hamburger-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        cursor: pointer;
+        .hamburger-bar {
+          width: 28px;
+          height: 2px;
+          background-color: white;
+          margin: 2px 0;
+          transition: 300ms ease-in-out;
+        }
+      }
+      
+
+  .hamburger-open {
+    :first-child {
+      transform: rotate(-45deg) translate(-2px, 4px);
+    }
+    :nth-child(2n) {
+      opacity: 0;
+    }
+    :nth-child(3n){
+      transform: rotate(45deg) translate(-4px, -6px);
+
+    }
+  }
+}
+
+.nav-transition-border{
+  &::after{
+    content: "";
+    height: 1px;
+    width: 0% !important;
+    transition: width 500ms ease-in-out;
+  }
+}
+
+.navbar-open{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:-100%;
+  background-color: $light-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 99;
+  transition: 500ms ease-in-out;
+  ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    :first-child{
+      border-bottom: none !important;
+    }
+
+    :last-child{
+      border-top: none !important;
+    }
+    .navbar-items{
+      width: 100%;
+      border-bottom: 1px solid #F4EDDC;
+      border-top: 1px solid #F4EDDC;
+      text-transform: uppercase;
+      font-size: 120px;
+      padding: 30px 60px;
+    }
+  }
+
+  .navbar-open-social{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    span{
+      font-size: 11px !important;
+      margin-right: 50px;
+    }
+  }
+  
+}
+
+.nav-transition{
+  top: 0% !important;
+  transition: 500ms ease-in-out;
+}
+
+
+.image{
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+video{
+    object-fit: cover;
+}
