@@ -12,7 +12,7 @@ const ThirdScreen = () => {
 
         </div>
         <div className="info">
-          <div>
+          <div className="info-text">
             <span>Hey Friend!</span>
             <h3>{`We want to\nknow you`}</h3>
 

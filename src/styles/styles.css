@@ -152,8 +152,14 @@ nav .nav-container {
 }
 
 @media (max-width: 500px) {
+  nav .nav-container svg {
+    width: 100px;
+  }
+}
+
+@media (max-width: 500px) {
   nav .nav-container {
-    padding: 35px 30px;
+    padding: 15px 10px;
   }
 }
 
@@ -503,7 +509,7 @@ nav .hamburger-open :nth-child(3n) {
           align-items: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   .third-section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -512,6 +518,12 @@ nav .hamburger-open :nth-child(3n) {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media (max-width: 900px) {
+  .third-section .image-wrapper {
+    width: 100%;
   }
 }
 
@@ -556,9 +568,43 @@ nav .hamburger-open :nth-child(3n) {
   margin-left: 100px;
 }
 
+@media (max-width: 900px) {
+  .third-section .info-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 @media (max-width: 1400px) {
   .third-section .info {
     margin-left: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .third-section .info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 20px;
   }
 }
 
@@ -579,7 +625,6 @@ nav .hamburger-open :nth-child(3n) {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin-bottom: 40px;
   }
 }
 
@@ -606,6 +651,14 @@ nav .hamburger-open :nth-child(3n) {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+  .third-section .info-contact {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 @media (max-width: 500px) {
