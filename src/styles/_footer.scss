@@ -1,5 +1,5 @@
 .footer{
-    height: 40vh;
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
     //padding: 60px 235px;
@@ -8,16 +8,14 @@
     &-group-container{
         display: flex;
         justify-content: space-around;
-        align-items: center;
         flex: 1;
+        margin-top: 30px;
     }
     &-group{
 
         &-title{
             margin-bottom: 40px;
-            span{
-                font-weight: normal;
-            }
+            
         }
 
         &-item{
@@ -26,7 +24,6 @@
             margin-bottom: 20px;
             span{
                 font-size: 12px;
-                letter-spacing: 3px;
 
                 @media(max-width:500px){
                     font-size: 7px;
@@ -34,6 +31,9 @@
             }
             svg{
                 margin-right: 10px;
+                @media(max-width:500px){
+                    font-size: 9px;
+                }
             }
 
         }
@@ -45,10 +45,16 @@
         align-items: center;
         justify-content: space-around;
         border-top: 1px solid #EFEDEA;
+
+        @media(max-width:500px){
+            height: auto;
+            padding: 10px 0px;
+        }
         span{
             font-size: 12px;
             text-transform: none;
             line-height: 10px;
+            letter-spacing: normal;
             @media(max-width:500px){
                 font-size: 9px;
             }

@@ -92,8 +92,12 @@ const Footer = () => {
           ))}
         </div>
         <div className="footer-copy">
-          <span>All Rights Reserved | Copyright © 2022</span>
-          <img src={Logo} alt="" />
+          <div>
+            <span>All Rights Reserved | Copyright © 2022</span>
+          </div>
+          <div>
+            <img src={Logo} alt="" />
+          </div>
         </div>
       </footer>
     </>
