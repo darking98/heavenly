@@ -24,9 +24,9 @@ function App() {
     const innerWrappers = gsap.utils.toArray(".inner");
 
     document.addEventListener("wheel", handleWheel);
-    document.addEventListener("touchstart", handleTouchStart);
-    document.addEventListener("touchmove", handleTouchMove);
-    document.addEventListener("touchend", handleTouchEnd);
+    //document.addEventListener("touchstart", handleTouchStart);
+    //document.addEventListener("touchmove", handleTouchMove);
+    //document.addEventListener("touchend", handleTouchEnd);
 
     let listening = false,
       direction = "down",
@@ -165,9 +165,9 @@ function App() {
     slideIn();
     return () => {
       document.removeEventListener("wheel", handleWheel);
-      document.removeEventListener("touchstart", handleTouchStart);
-      document.removeEventListener("touchmove", handleTouchMove);
-      document.removeEventListener("touchend", handleTouchEnd);
+      //document.removeEventListener("touchstart", handleTouchStart);
+      //document.removeEventListener("touchmove", handleTouchMove);
+      //document.removeEventListener("touchend", handleTouchEnd);
     };
   }, []);
 
