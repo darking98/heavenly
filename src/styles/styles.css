@@ -397,6 +397,28 @@ nav .hamburger-open :nth-child(3n) {
   width: 100%;
 }
 
+.second-screen-container img {
+  width: 800px;
+}
+
+@media (max-width: 1600px) {
+  .second-screen-container img {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .second-screen-container img {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .second-screen-container img {
+    display: none;
+  }
+}
+
 .second-screen-container .second-screen-title {
   padding-left: 60px;
   -webkit-box-flex: 1;
@@ -404,27 +426,158 @@ nav .hamburger-open :nth-child(3n) {
           flex: 1;
 }
 
+@media (max-width: 1024px) {
+  .second-screen-container .second-screen-title {
+    padding-left: 0px;
+  }
+}
+
 .second-screen-container .second-screen-title h3 {
   white-space: pre;
 }
 
+@media (max-width: 1024px) {
+  .second-screen-container .second-screen-title h3 {
+    font-size: 60px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .second-screen-container .second-screen-title h3 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .second-screen-container .second-screen-title span {
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+  }
+}
+
+.second-screen .second-screen-items {
+  margin: 50px 0px;
+}
+
+.second-screen .second-screen-items :nth-child(2) {
+  border-top: 0px !important;
+  border-bottom: 0px !important;
+}
+
+.second-screen .second-screen-items :first-child div::after {
+  content: '';
+  height: 1px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: white;
+}
+
+@media (max-width: 1024px) {
+  .second-screen .second-screen-items :first-child div::after {
+    width: 100%;
+  }
+}
+
+.second-screen .second-screen-items :first-child div::before {
+  content: '';
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  width: 100.8%;
+  left: 0;
+  background-color: white;
+}
+
+@media (max-width: 1440px) {
+  .second-screen .second-screen-items :first-child div::before {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .second-screen .second-screen-items :first-child div::before {
+    width: 100%;
+  }
+}
+
+.second-screen .second-screen-items :nth-child(2) div::before {
+  content: '';
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  width: 102.5%;
+  left: 0;
+  background-color: white;
+}
+
+@media (max-width: 1440px) {
+  .second-screen .second-screen-items :nth-child(2) div::before {
+    width: 102%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .second-screen .second-screen-items :nth-child(2) div::before {
+    width: 100%;
+  }
+}
+
+.second-screen .second-screen-items :nth-child(3) div::before {
+  content: '';
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  width: 106%;
+  left: 0;
+  background-color: white;
+}
+
+@media (max-width: 1440px) {
+  .second-screen .second-screen-items :nth-child(3) div::before {
+    width: 107%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .second-screen .second-screen-items :nth-child(3) div::before {
+    width: 100%;
+  }
+}
+
 .second-screen .second-screen-items .second-screen-item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5px 0px;
-  border-top: 1px solid #F4EDDC;
-  border-bottom: 1px solid #F4EDDC;
+  padding: 15px 25px;
   font-size: 18px;
 }
 
-.second-screen .second-screen-items .second-screen-item button {
+.second-screen .second-screen-items .second-screen-item .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.second-screen .second-screen-items .second-screen-item .button-container button {
   border-radius: 40px;
   border: none;
-  padding: 10px;
+  padding: 15px 25px;
+  margin-left: 20px;
 }
 
 .first-screen-opacity {
@@ -854,19 +1007,19 @@ nav .hamburger-open :nth-child(3n) {
 
 @media (max-width: 1440px) {
   .fourth-screen .item h3 {
-    font-size: 70px;
+    font-size: 50px;
   }
 }
 
 @media (max-width: 1024px) {
   .fourth-screen .item h3 {
-    font-size: 50px;
+    font-size: 30px;
   }
 }
 
 @media (max-width: 500px) {
   .fourth-screen .item h3 {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 

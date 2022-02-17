@@ -1,8 +1,11 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import { useForm } from "@formspree/react";
 import * as Yup from "yup";
 
 const SixthScreen = () => {
+  const [state, handleSubmit] = useForm("mpzbqewp");
+
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -25,17 +28,6 @@ const SixthScreen = () => {
       .required("Campo Requerido"),
   });
 
-  const handleSubmit = (e) => {
-    console.log(e);
-    fetch('https://formsubmit.io/send/1687f6c8-ce93-4697-a411-01a3d6e407e4',{
-      method:'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(e)
-    })
-  };
   return (
     <>
       <div className="sixth-screen-container">

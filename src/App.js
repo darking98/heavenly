@@ -198,7 +198,6 @@ function App() {
   
   return (
     <>
-      <Timer/>
       <Navbar navColor={navColor} />
       <section className="section">
         <div class="outer">
