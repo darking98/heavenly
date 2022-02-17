@@ -5,34 +5,33 @@ import FifthScreen from "./components/FifthScreen";
 import ThirdScreen from "./components/ThirdScreen";
 import SecondScreen from "./components/SecondScreen";
 import FourthScreen from "./components/FourthScreen";
+import SixthScreen from "./components/SixthScreen";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
-
+import Timer from "./components/commonComponents/Timer";
+import { BiRadioCircle } from "react-icons/bi";
 function App() {
-
-  const[navColor, setNavColor] = useState('#FFF');
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin);
+  const [navColor, setNavColor] = useState("#FFF");
   
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(ScrollToPlugin);
-    
     const sections = gsap.utils.toArray("section");
     const images = gsap.utils.toArray(".bg");
 
     const outerWrappers = gsap.utils.toArray(".outer");
     const innerWrappers = gsap.utils.toArray(".inner");
-
     document.addEventListener("wheel", handleWheel);
+    document.addEventListener("keydown", handleArrows);
+
     //document.addEventListener("touchstart", handleTouchStart);
     //document.addEventListener("touchmove", handleTouchMove);
     //document.addEventListener("touchend", handleTouchEnd);
-
     let listening = false,
       direction = "down",
       current,
       next = 0;
-      
     const touch = {
       startX: 0,
       startY: 0,
@@ -86,20 +85,27 @@ function App() {
             .set(sections[current], { autoAlpha: 0 })
         );
       }
-      sections.forEach(element => {
-        if(element.className === 'section green' && sections[next] === element){
-          setNavColor('#0D6957')
-        }else if(element.className !== 'sections green' && sections[current] === element){
-          setNavColor('#FFF')
+      sections.forEach((element) => {
+        if (
+          element.className === "section green" &&
+          sections[next] === element
+        ) {
+          setNavColor("#0D6957");
+        } else if (
+          element.className !== "sections green" &&
+          sections[current] === element
+        ) {
+          setNavColor("#FFF");
         }
-      })
+      });
       tl.play(0);
     }
 
     // Slides a section out on scroll up
     function slideOut() {
-      gsap.set(sections[current], { zIndex: 1 });
-      gsap.set(sections[next], { autoAlpha: 1, zIndex: 0 });
+      console.log(sections[next]);
+      gsap.set(sections[current], { zIndex: 0 });
+      gsap.set(sections[next], { autoAlpha: 1, zIndex: 1 });
       gsap.set([outerWrappers[next], innerWrappers[next]], { yPercent: 0 });
       gsap.set(images[next], { yPercent: 0 });
 
@@ -111,10 +117,13 @@ function App() {
             current = next;
           },
         })
+
         .to(outerWrappers[current], { yPercent: 100 }, 0)
         .to(innerWrappers[current], { yPercent: -100 }, 0)
         .to(images[current], { yPercent: 15 }, 0)
-        .from(images[next], { yPercent: -15 }, 0)
+        .from(outerWrappers[next], { yPercent: -100 }, 0)
+        .from(innerWrappers[next], { yPercent: 100 }, 0)
+        .set(images[next], { yPercent: 0 })
         .set(images[current], { yPercent: 0 });
     }
 
@@ -131,6 +140,19 @@ function App() {
         next = current - 1;
         if (next < 0) next = sections.length - 1;
         slideOut();
+      }
+    }
+
+    function handleArrows(e) {
+      const code = e.key;
+      if (!listening) return;
+      if (code === "ArrowDown") {
+        direction = "down";
+        handleDirection();
+      } else if (code === "ArrowUp") {
+        if (!listening) return;
+        direction = "up";
+        handleDirection();
       }
     }
 
@@ -165,14 +187,18 @@ function App() {
     slideIn();
     return () => {
       document.removeEventListener("wheel", handleWheel);
+      document.removeEventListener("keydown", handleArrows);
       //document.removeEventListener("touchstart", handleTouchStart);
       //document.removeEventListener("touchmove", handleTouchMove);
       //document.removeEventListener("touchend", handleTouchEnd);
     };
   }, []);
 
+
+  
   return (
     <>
+      <Timer/>
       <Navbar navColor={navColor} />
       <section className="section">
         <div class="outer">
@@ -183,7 +209,7 @@ function App() {
           </div>
         </div>
       </section>
-      {/*<section className="section">
+      <section className="section">
         <div class="outer">
           <div class="inner">
             <div class="bg ">
@@ -191,8 +217,8 @@ function App() {
             </div>
           </div>
         </div>
-  </section>*/}
-      <section className="section green">
+      </section>
+      <section className="section green" id="green">
         <div class="outer">
           <div class="inner">
             <div class="bg">
@@ -215,6 +241,15 @@ function App() {
           <div class="inner">
             <div class="bg">
               <FifthScreen />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div class="outer">
+          <div class="inner">
+            <div class="bg">
+              <SixthScreen />
             </div>
           </div>
         </div>

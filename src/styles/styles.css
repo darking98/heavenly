@@ -8,7 +8,7 @@
 }
 
 span {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Gotham Rounded";
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -17,7 +17,7 @@ span {
 
 @media (max-width: 1440px) {
   span {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
@@ -45,19 +45,19 @@ h3 {
 
 @media (max-width: 1440px) {
   h3 {
-    font-size: 100px;
+    font-size: 70px;
   }
 }
 
 @media (max-width: 1024px) {
   h3 {
-    font-size: 70px;
+    font-size: 50px;
   }
 }
 
 @media (max-width: 500px) {
   h3 {
-    font-size: 52px;
+    font-size: 42px;
   }
 }
 
@@ -117,6 +117,25 @@ section .bg {
   top: 0;
   background-size: cover;
   background-position: center;
+}
+
+.dots-container {
+  z-index: 99999;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 20px;
+}
+
+.dots-container svg {
+  cursor: pointer;
 }
 
 nav {
@@ -262,6 +281,7 @@ nav .hamburger-open :nth-child(3n) {
   text-transform: uppercase;
   font-size: 120px;
   padding: 30px 60px;
+  cursor: pointer;
 }
 
 @media (max-width: 1400px) {
@@ -405,6 +425,41 @@ nav .hamburger-open :nth-child(3n) {
   border-radius: 40px;
   border: none;
   padding: 10px;
+}
+
+.first-screen-opacity {
+  position: absolute;
+  text-align: center;
+  -webkit-animation: opacity 2s ease-in-out;
+          animation: opacity 2s ease-in-out;
+}
+
+.first-screen-opacity h3 {
+  white-space: pre;
+}
+
+@media (max-width: 600px) {
+  .first-screen-opacity h3 {
+    font-size: 25px;
+  }
+}
+
+@-webkit-keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .footer {
@@ -797,7 +852,7 @@ nav .hamburger-open :nth-child(3n) {
   margin-top: 20px;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1440px) {
   .fourth-screen .item h3 {
     font-size: 70px;
   }
@@ -813,5 +868,111 @@ nav .hamburger-open :nth-child(3n) {
   .fourth-screen .item h3 {
     font-size: 40px;
   }
+}
+
+.sixth-screen-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 60px;
+  background-color: #0D6957;
+}
+
+@media (max-width: 800px) {
+  .sixth-screen-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.sixth-screen-container .sixth-screen-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media (max-width: 800px) {
+  .sixth-screen-container .sixth-screen-info {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 100%;
+  }
+}
+
+.sixth-screen-container .sixth-screen-info h3 {
+  margin-top: 10px;
+}
+
+.sixth-screen-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media (max-width: 800px) {
+  .sixth-screen-container form {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.sixth-screen-container form label {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.sixth-screen-container form input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #72ABE2;
+  outline: none;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+.sixth-screen-container form button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 15px;
+  background-color: #72ABE2;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
 }
 /*# sourceMappingURL=styles.css.map */

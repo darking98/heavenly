@@ -1,0 +1,21 @@
+.first-screen-opacity{
+    position: absolute;
+    text-align: center;
+    animation: opacity 2s ease-in-out;
+    h3{
+        white-space: pre;
+
+        @media(max-width:600px){
+            font-size: 25px;
+        }
+    }
+}
+
+@keyframes opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
