@@ -7,12 +7,14 @@ const SecondScreen = () => {
       button: "Direction #6325, USA",
       rotate: "rotate(5deg)",
       color: "#72ABE2",
+      className:'button-right'
     },
     {
       text: "Where to find us",
       button: "Every Sunday 7pm to 8pm",
       rotate: "rotate(-5deg)",
       color: "#E44A3D",
+      className:'button-left'
     },
     {
       text: "Other information",
@@ -41,6 +43,7 @@ const SecondScreen = () => {
                         transform: element.rotate,
                         background: element.color,
                       }}
+                      className={element.className}
                     >
                       {element.button}
                     </button>

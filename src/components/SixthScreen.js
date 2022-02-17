@@ -82,7 +82,7 @@ const SixthScreen = () => {
               component="div"
               className="field-error text-danger"
             />
-            <button type="submit">
+            <button type="submit" className="button-left">
               Submit
             </button>
           </Form>

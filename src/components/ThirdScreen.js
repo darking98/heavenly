@@ -18,7 +18,7 @@ const ThirdScreen = () => {
 
           </div>
           <div className="info-contact">
-            <button>Contact Us</button>
+            <button className="button-left">Contact Us</button>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

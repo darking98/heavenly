@@ -138,6 +138,32 @@ section .bg {
   cursor: pointer;
 }
 
+.button-left {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  -webkit-transform: rotate(-5deg) !important;
+          transform: rotate(-5deg) !important;
+}
+
+.button-left:hover {
+  opacity: 0.8;
+  -webkit-transform: rotate(5deg) !important;
+          transform: rotate(5deg) !important;
+}
+
+.button-right {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  -webkit-transform: rotate(5deg) !important;
+          transform: rotate(5deg) !important;
+}
+
+.button-right:hover {
+  opacity: 0.8;
+  -webkit-transform: rotate(-5deg) !important;
+          transform: rotate(-5deg) !important;
+}
+
 nav {
   position: fixed;
   z-index: 999;
@@ -1121,7 +1147,7 @@ nav .hamburger-open :nth-child(3n) {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 10px 15px;
+  padding: 10px 25px;
   background-color: #72ABE2;
   text-transform: uppercase;
   letter-spacing: 0.2em;

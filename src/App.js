@@ -24,10 +24,9 @@ function App() {
     const innerWrappers = gsap.utils.toArray(".inner");
     document.addEventListener("wheel", handleWheel);
     document.addEventListener("keydown", handleArrows);
-
-    //document.addEventListener("touchstart", handleTouchStart);
-    //document.addEventListener("touchmove", handleTouchMove);
-    //document.addEventListener("touchend", handleTouchEnd);
+    document.addEventListener("touchstart", handleTouchStart);
+    document.addEventListener("touchmove", handleTouchMove);
+    document.addEventListener("touchend", handleTouchEnd);
     let listening = false,
       direction = "down",
       current,
@@ -157,6 +156,7 @@ function App() {
     }
 
     function handleWheel(e) {
+      console.log(e)
       if (!listening) return;
       direction = e.wheelDeltaY < 0 ? "down" : "up";
       handleDirection();
@@ -188,9 +188,9 @@ function App() {
     return () => {
       document.removeEventListener("wheel", handleWheel);
       document.removeEventListener("keydown", handleArrows);
-      //document.removeEventListener("touchstart", handleTouchStart);
-      //document.removeEventListener("touchmove", handleTouchMove);
-      //document.removeEventListener("touchend", handleTouchEnd);
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleTouchEnd);
     };
   }, []);
 
