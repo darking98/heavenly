@@ -125,3 +125,15 @@ section {
     transform: rotate(-5deg) !important;
   }
 }
+
+.timer{
+  z-index: 9999;
+  left: 5%;
+  bottom: 10%;
+  position:absolute;
+  background-color: $light-white;
+  color: $black;
+  padding: 5px 15px;
+  border-radius: 20px;
+  letter-spacing: 0.2em;
+}

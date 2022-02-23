@@ -1,8 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Logo from "../assets/Logo.svg";
 import NavbarOpen from "./commonComponents/NavbarOpen";
-const Navbar = ({ navColor }) => {
+import gsap from "gsap";
+const Navbar = ({ navColor, current, setNavColor, sections, images, outerWrappers, innerWrappers, listening, next, changed, setChanged }) => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  
+  useEffect(() => {
+    console.log(sections)
+
+  },[changed])
+  const handleClick = () => {
+   current = 2;
+   next = current + 1;
+   setChanged(!changed)
+  }
+  
   return (
     <>
       <nav className={hamburgerOpen && "nav-transition-border"} >
@@ -111,13 +123,13 @@ const Navbar = ({ navColor }) => {
             }
             onClick={() => setHamburgerOpen(!hamburgerOpen)}
           >
-            <div className="hamburger-bar" style={{background:navColor}}></div>
+            <div className="hamburger-bar" style={{background: navColor}}></div>
             <div className="hamburger-bar" style={{background:navColor}}></div>
             <div className="hamburger-bar" style={{background:navColor}}></div>
           </div>
         </div>
       </nav>
-      <NavbarOpen navOpen={hamburgerOpen} setNavOpen={setHamburgerOpen} />
+      <NavbarOpen navOpen={hamburgerOpen} setNavOpen={setHamburgerOpen} handleClick={handleClick}/>
     </>
   );
 };

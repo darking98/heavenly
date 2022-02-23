@@ -76,12 +76,12 @@ const Footer = () => {
       <footer className="footer">
         <div className="footer-group-container">
           {groups.map((element) => (
-            <div className="footer-group">
+            <div className="footer-group" key={element.title}>
               <div className="footer-group-title">
                 <span>{element.title}</span>
               </div>
               {element.items.map((item) => (
-                <a href={item.path}>
+                <a href={item.path} key={item.text}>
                   <div className="footer-group-item">
                     {item.icon}
                     <span>{item.text}</span>

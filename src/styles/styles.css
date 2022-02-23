@@ -164,6 +164,18 @@ section .bg {
           transform: rotate(-5deg) !important;
 }
 
+.timer {
+  z-index: 9999;
+  left: 5%;
+  bottom: 10%;
+  position: absolute;
+  background-color: #F9F5ED;
+  color: #000000;
+  padding: 5px 15px;
+  border-radius: 20px;
+  letter-spacing: 0.2em;
+}
+
 nav {
   position: fixed;
   z-index: 999;

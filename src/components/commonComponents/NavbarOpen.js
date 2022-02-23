@@ -1,13 +1,22 @@
 import React from "react";
 
-const NavbarOpen = ({ navOpen, setNavOpen }) => {
+const NavbarOpen = ({ navOpen, setNavOpen, handleClick }) => {
+
+
+
   return (
     <>
       <div className={navOpen ? "navbar-open nav-transition" : "navbar-open"}>
         <ul>
-          <li className="navbar-items">Join Us</li>
-          <li className="navbar-items">About</li>
-          <li className="navbar-items">Contact</li>
+          <li className="navbar-items" onClick={handleClick}>
+            Join Us
+          </li>
+          <li className="navbar-items" onClick={handleClick}>
+            About
+          </li>
+          <li className="navbar-items" onClick={handleClick}>
+            Contact
+          </li>
         </ul>
         <div className="navbar-open-social">
           <span>Washington, USA</span>

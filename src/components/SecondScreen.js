@@ -35,7 +35,7 @@ const SecondScreen = () => {
             <div>
               <div className="second-screen-items">
                 {items.map((element) => (
-                  <div className="second-screen-item">
+                  <div className="second-screen-item" key={element.button}>
                     <p>{element.text}</p>
                     <div className="button-container">
                     <button

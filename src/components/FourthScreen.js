@@ -24,7 +24,7 @@ const FourthScreen = () => {
       <div className="fourth-screen">
         <div className="item-container">
           {items.map((element) => (
-            <div className="item">
+            <div className="item" key={element.span}>
               <div className="item-text">
                 <span>{element.span}</span>
                 <h3>{element.header}</h3>
