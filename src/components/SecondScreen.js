@@ -30,7 +30,7 @@ const SecondScreen = () => {
           <div style={{width:'100%'}}>
             <div className="second-screen-title">
               <span>Heavenly Home Gatherings</span>
-              <h3>{`COME & JOIN US\nEVERY WEEKEND`}</h3>
+              <h3 className="section-heading">{`COME & JOIN US\nEVERY WEEKEND`}</h3>
             </div>
             <div>
               <div className="second-screen-items">
@@ -57,6 +57,7 @@ const SecondScreen = () => {
 
           <img src={image} alt="" />
         </div>
+        <div className="preview"/>
       </div>
     </>
   );

@@ -4,7 +4,7 @@ import Timer from "./commonComponents/Timer";
 const FirstScreen = () => {
   return (
     <>
-      <div style={{ height: "100vh", position: "relative", display:'flex',justifyContent:'center',alignItems:'center' }}>
+      <div className="first-screen" style={{ height: "100vh", position: "relative", display:'flex',justifyContent:'center',alignItems:'center' }}>
         <video
           src={Video}
           width="100%"
@@ -19,6 +19,7 @@ const FirstScreen = () => {
           <span>Welcome home!</span>
           <h3>{`A fresh Oasis from\nHeaven to our families`}</h3>
         </div>
+        <div className="preview"/>
       </div>
       <Timer expiryTimestamp={new Date(2022,2,22)}/>
     </>

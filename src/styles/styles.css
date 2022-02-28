@@ -176,6 +176,13 @@ section .bg {
   letter-spacing: 0.2em;
 }
 
+.preview {
+  position: absolute;
+  bottom: 0;
+  height: 3%;
+  width: 100%;
+}
+
 nav {
   position: fixed;
   z-index: 999;
@@ -205,7 +212,7 @@ nav .nav-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 35px 60px;
+  padding: 25px 60px;
 }
 
 @media (max-width: 500px) {
@@ -422,6 +429,10 @@ nav .hamburger-open :nth-child(3n) {
   min-height: 100vh;
 }
 
+.second-screen .preview {
+  background-color: #F9F5ED;
+}
+
 .second-screen-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -618,19 +629,26 @@ nav .hamburger-open :nth-child(3n) {
   margin-left: 20px;
 }
 
-.first-screen-opacity {
+.first-screen .preview {
+  background-color: #000000;
+}
+
+.first-screen .first-screen-opacity {
   position: absolute;
   text-align: center;
   -webkit-animation: opacity 2s ease-in-out;
           animation: opacity 2s ease-in-out;
 }
 
-.first-screen-opacity h3 {
+.first-screen .first-screen-opacity h3 {
   white-space: pre;
+  color: #72abe2;
+  opacity: 0.6;
+  margin-top: 20px;
 }
 
 @media (max-width: 600px) {
-  .first-screen-opacity h3 {
+  .first-screen .first-screen-opacity h3 {
     font-size: 25px;
   }
 }
@@ -753,6 +771,10 @@ nav .hamburger-open :nth-child(3n) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.third-section .preview {
+  background-color: #0D6957;
 }
 
 @media (max-width: 900px) {
@@ -956,8 +978,11 @@ nav .hamburger-open :nth-child(3n) {
 }
 
 .fourth-screen {
-  min-height: 100vh;
   background-color: #0D6957;
+}
+
+.fourth-screen .fourth-screen-container {
+  min-height: 100vh;
   padding: 0px 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -972,9 +997,13 @@ nav .hamburger-open :nth-child(3n) {
 }
 
 @media (max-width: 500px) {
-  .fourth-screen {
+  .fourth-screen .fourth-screen-container {
     padding: 0px 20px;
   }
+}
+
+.fourth-screen .preview {
+  background-color: #163274;
 }
 
 .fourth-screen .item-container :last-child {

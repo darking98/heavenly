@@ -22,19 +22,23 @@ const FourthScreen = () => {
   return (
     <>
       <div className="fourth-screen">
-        <div className="item-container">
-          {items.map((element) => (
-            <div className="item" key={element.span}>
-              <div className="item-text">
-                <span>{element.span}</span>
-                <h3>{element.header}</h3>
+        <div className="fourth-screen-container">
+          <div className="item-container">
+            {items.map((element) => (
+              <div className="item" key={element.span}>
+                <div className="item-text">
+                  <span>{element.span}</span>
+                  <h3>{element.header}</h3>
+                </div>
+                <div className="arrow-item">
+                  <HiOutlineArrowNarrowRight />
+                </div>
               </div>
-              <div className="arrow-item">
-                <HiOutlineArrowNarrowRight />
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
+        <div className="preview" />
       </div>
     </>
   );

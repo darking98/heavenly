@@ -1,13 +1,20 @@
 .fourth-screen{
-    min-height: 100vh;
     background-color: $green;
-    padding: 0px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-    @media(max-width:500px){
-        padding: 0px 20px;
+    .fourth-screen-container{
+        min-height: 100vh;
+        padding: 0px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        @media(max-width:500px){
+            padding: 0px 20px;
+        }
+        
+    }
+    .preview{
+        background-color: $blue;
     }
     
     .item-container{

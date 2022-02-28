@@ -5,6 +5,9 @@
   color: $light-white;
   min-height: 100vh;
 
+  .preview{
+    background-color: $light-white;
+  }
   &-container {
     display: flex;
     align-items: center;

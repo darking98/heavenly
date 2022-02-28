@@ -1,21 +1,28 @@
-.first-screen-opacity{
+.first-screen {
+    .preview{
+        background-color: $black;
+    }
+  .first-screen-opacity {
     position: absolute;
     text-align: center;
     animation: opacity 2s ease-in-out;
-    h3{
-        white-space: pre;
+    h3 {
+      white-space: pre;
+      color: #72abe2;
+      opacity: 0.6;
+      margin-top: 20px;
+      @media (max-width: 600px) {
+        font-size: 25px;
+      }
+    }
+  }
 
-        @media(max-width:600px){
-            font-size: 25px;
-        }
+  @keyframes opacity {
+    from {
+      opacity: 0;
     }
-}
-
-@keyframes opacity{
-    from{
-        opacity: 0;
+    to {
+      opacity: 1;
     }
-    to{
-        opacity: 1;
-    }
+  }
 }

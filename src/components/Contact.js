@@ -2,8 +2,7 @@ import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useForm } from "@formspree/react";
 import * as Yup from "yup";
-
-const SixthScreen = () => {
+const Contact = () => {
   const [state, handleSubmit] = useForm("mpzbqewp");
 
   const phoneRegExp =
@@ -92,4 +91,4 @@ const SixthScreen = () => {
   );
 };
 
-export default SixthScreen;
+export default Contact;

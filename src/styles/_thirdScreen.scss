@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
 
+  .preview{
+    background-color: $green;
+  }
   @media (max-width: 900px) {
     flex-direction: column-reverse;
     justify-content: space-between;

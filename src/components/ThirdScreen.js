@@ -26,6 +26,7 @@ const ThirdScreen = () => {
             </p>
           </div>
         </div>
+        <div className="preview"/>
       </div>
     </>
   );
