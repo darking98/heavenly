@@ -67,6 +67,7 @@ const LandingPage = () => {
         y: 0,
         opacity:1,
         duration: 0.5,
+        lazy:false,
         ease: "ease-in-out"
       })
     currentIndex.current = index;
