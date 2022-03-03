@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import FirstScreen from "./FirstScreen";
 import FifthScreen from "./FifthScreen";
 import ThirdScreen from "./ThirdScreen";
@@ -9,23 +9,26 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 import Navbar from "./Navbar";
 const LandingPage = () => {
+  const [navColor, setNavColor] = useState('')
   const components = [
-    <FirstScreen />,
-    <SecondScreen />,
-    <ThirdScreen />,
-    <FourthScreen />,
-    <FifthScreen />,
+    <FirstScreen gotoSection={gotoSection} />,
+    <SecondScreen gotoSection={gotoSection}/>,
+    <ThirdScreen gotoSection={gotoSection}/>,
+    <FourthScreen gotoSection={gotoSection}/>,
+    <FifthScreen gotoSection={gotoSection}/>,
   ];
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(ScrollToPlugin);
   const animating = useRef();
   const currentIndex = useRef();
+
   function gotoSection(index, direction) {
     const sections = gsap.utils.toArray("section");
     const images = gsap.utils.toArray(".bg");
     const outerWrappers = gsap.utils.toArray(".outer");
     const innerWrappers = gsap.utils.toArray(".inner");
     const headings = gsap.utils.toArray(".section-heading");
+    console.log(headings)
     const clamp = gsap.utils.clamp(0, sections.length - 1);
     index = clamp(index); // make sure it's valid
     // we're at the end, so exit
@@ -33,13 +36,12 @@ const LandingPage = () => {
       return;
     }
 
-    
 
     animating.current = true;
     let fromTop = direction === -1,
       dFactor = fromTop ? -1 : 1,
       tl = gsap.timeline({
-        defaults: { duration: 0.7, ease: "power1.inOut" },
+        defaults: { duration: 0.7, ease: "power4.out", delay: 0.25 },
         onComplete: () => (animating.current = false),
       });
     if (currentIndex.current >= 0) {
@@ -58,8 +60,25 @@ const LandingPage = () => {
       0
     )
       .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
-      .fromTo(headings[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
+      .fromTo(headings[0],  {
+        y: -20,
+        opacity:0,
+      }, {
+        y: 0,
+        opacity:1,
+        duration: 0.5,
+        ease: "ease-in-out"
+      })
     currentIndex.current = index;
+    
+
+    if(sections[2] === sections[currentIndex.current])
+   {
+     setNavColor('#0D6957')
+   } else{
+     setNavColor('#FFF')
+   }
+
   }
 
   useEffect(() => {
@@ -125,7 +144,7 @@ const LandingPage = () => {
   return (
     <>
       <Navbar
-        navColor={"#FFF"}
+        navColor={navColor}
         //setNavColor={setNavColor}
         gotoSection={gotoSection}
       />

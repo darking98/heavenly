@@ -18,7 +18,7 @@
       width: 800px;
 
       @media (max-width: 1600px) {
-        width: 500px;
+        width: 450px;
       }
 
       @media (max-width: 1024px) {
@@ -37,7 +37,9 @@
       flex: 1;
       h3 {
         white-space: pre;
-        
+        @media (max-width: 1440px) {
+          font-size:90px;
+        }
         @media (max-width: 1024px) {
             font-size: 60px; 
             text-align: center;
@@ -86,7 +88,7 @@
             left: 0;
             background-color: white;
             @media(max-width:1440px){
-                width: 100%;
+                width: 100.4%;
             }
             @media (max-width:1024px){
                 width: 100%;
@@ -104,7 +106,7 @@
             left: 0;
             background-color: white;
             @media(max-width:1440px){
-                width: 102%;
+                width: 103.5%;
             }
             @media (max-width:1024px){
                 width: 100%;
@@ -122,7 +124,7 @@
             left: 0;
             background-color: white;
             @media(max-width:1440px){
-                width: 107%;
+                width: 110.1%;
             }
             @media (max-width:1024px){
                 width: 100%;

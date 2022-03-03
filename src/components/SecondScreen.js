@@ -1,6 +1,7 @@
 import React from "react";
 import image from "../assets/second-screen.png";
-const SecondScreen = () => {
+import Dots from './commonComponents/Dots'
+const SecondScreen = ({gotoSection}) => {
   const items = [
     {
       text: "Where to find us",
@@ -25,6 +26,7 @@ const SecondScreen = () => {
   ];
   return (
     <>
+      <Dots current={1} gotoSection={gotoSection}/>
       <div className="second-screen">
         <div className="second-screen-container">
           <div style={{width:'100%'}}>

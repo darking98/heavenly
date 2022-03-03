@@ -1,7 +1,8 @@
 import React from "react";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import Dots from './commonComponents/Dots'
 
-const FourthScreen = () => {
+const FourthScreen = ({gotoSection}) => {
   const items = [
     {
       span: "CONNECT WITH HEAVENLY",
@@ -21,6 +22,7 @@ const FourthScreen = () => {
   ];
   return (
     <>
+     <Dots gotoSection = {gotoSection} current = {3}/>
       <div className="fourth-screen">
         <div className="fourth-screen-container">
           <div className="item-container">

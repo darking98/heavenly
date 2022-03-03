@@ -94,6 +94,12 @@ section {
   }
 }
 
+.green-dots{
+  svg{
+    fill :$green;
+
+  }
+}
 .dots-container{
   z-index: 99999;
   position: absolute;
@@ -103,7 +109,13 @@ section {
   flex-direction: column;
   font-size: 20px;
 
+
+  @media(max-width:1000px){
+    display:none;
+  }
+
   svg{
+    font-size:12px;
     cursor: pointer;
   }
 }
@@ -144,4 +156,24 @@ section {
   height: 3%;
   width: 100%;
 
+}
+
+
+.second-screen, .third-section, .fifth-section, .sixth-screen-container{
+  @media(max-width:1440px){
+    padding-top: 60px;
+  }
+
+  @media(max-width:1000px){
+    padding-top: 0px;
+  }
+}
+
+.fourth-screen{
+  @media(max-width:1440px){
+    padding-top: 20px;
+  }
+  @media(max-width:1000px){
+    padding-top: 0px;
+  }
 }

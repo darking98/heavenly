@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import NavbarOpen from "./commonComponents/NavbarOpen";
 import { Link } from "react-router-dom";
-const Navbar = ({ navColor, setNavColor, gotoSection }) => {
+const Navbar = ({ navColor, setNavColor, gotoSection, contact }) => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
   return (
@@ -133,6 +133,7 @@ const Navbar = ({ navColor, setNavColor, gotoSection }) => {
         navOpen={hamburgerOpen}
         setNavOpen={setHamburgerOpen}
         gotoSection={gotoSection}
+        contact={contact}
       />
     </>
   );

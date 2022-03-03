@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useForm } from "@formspree/react";
 import * as Yup from "yup";
+import Navbar from './Navbar'
 const Contact = () => {
   const [state, handleSubmit] = useForm("mpzbqewp");
 
@@ -29,6 +30,7 @@ const Contact = () => {
 
   return (
     <>
+    <Navbar navColor="#FFF" contact ={true}/>
       <div className="sixth-screen-container">
         <div className="sixth-screen-info">
           <span>Contact us</span>

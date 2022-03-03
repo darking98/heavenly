@@ -24,7 +24,7 @@
       width: 800px;
 
       @media (max-width: 1600px) {
-        width: 500px;
+        width:450px;
       }
 
       @media (max-width: 1024px) {
@@ -52,8 +52,8 @@
         justify-content: flex-end;
       }
     }
-    @media (max-width: 1400px) {
-      margin-left: 20px;
+    @media (max-width: 1440px) {
+      margin-left: 50px;
     }
 
     @media(max-width:900px){
@@ -79,7 +79,10 @@
     h3 {
       white-space: pre;
       color: $green;
+      @media(max-width:1440px){
+        font-size: 90px;
 
+      }
       @media (max-width: 500px) {
         font-size: 40px;
       }
