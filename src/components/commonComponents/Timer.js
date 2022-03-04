@@ -1,10 +1,9 @@
-import React, {useEffect} from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTimer } from 'react-timer-hook';
 
-const Timer = () => {
+const Timer = ({ expiryTimestamp }) => {
 
-  const date = new Date();
-  //date.setHours(20,0,0,0)
+  //console.log(expiryTimestamp())
   const {
     seconds,
     minutes,
@@ -15,13 +14,22 @@ const Timer = () => {
     pause,
     resume,
     restart,
-  } = useTimer({ date, onExpire: () => console.log('onExpire called') });
-  console.log(date)
+  } = useTimer({ expiryTimestamp, onExpire: () => console.log('onExpire called') });
   useEffect(() => {
     start()
-  },[])
+  }, [])
   return (
-    <div className="timer">{hours} : {minutes} : {seconds}</div>
+    <div className="timer">
+      {isRunning ?
+        (
+          <>
+           {days} : {hours} : {minutes} : {seconds}
+          </>
+
+        ) : (
+          <p>We are live!</p>
+        )
+      }</div>
   )
 }
 

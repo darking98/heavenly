@@ -187,6 +187,11 @@ section .bg {
   letter-spacing: 0.2em;
 }
 
+.timer p {
+  color: #0D6957;
+  letter-spacing: normal;
+}
+
 .preview {
   position: absolute;
   bottom: 0;
@@ -760,7 +765,6 @@ nav .hamburger-open :nth-child(3n) {
 }
 
 .footer {
-  min-height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -840,16 +844,17 @@ nav .hamburger-open :nth-child(3n) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 10px 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 12%;
   border-top: 1px solid #EFEDEA;
 }
 
 @media (max-width: 500px) {
   .footer-copy {
     height: auto;
-    padding: 10px 0px;
+    padding: 10px 6%;
   }
 }
 

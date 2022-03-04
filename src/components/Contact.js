@@ -3,6 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useForm } from "@formspree/react";
 import * as Yup from "yup";
 import Navbar from './Navbar'
+import Footer from './commonComponents/Footer'
 const Contact = () => {
   const [state, handleSubmit] = useForm("mpzbqewp");
 
@@ -89,6 +90,7 @@ const Contact = () => {
           </Form>
         </Formik>
       </div>
+      <Footer/>
     </>
   );
 };

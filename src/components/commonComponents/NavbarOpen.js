@@ -47,7 +47,6 @@ const NavbarOpen = ({ navOpen, setNavOpen, gotoSection, contact }) => {
 
   }
 
-  console.log(contact)
 
   return (
     <>

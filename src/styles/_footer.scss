@@ -1,5 +1,5 @@
 .footer{
-    min-height: 40vh;
+    //min-height: 40vh;
     display: flex;
     flex-direction: column;
     //padding: 60px 235px;
@@ -50,13 +50,13 @@
     &-copy{
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        padding:10px 0px;
+        justify-content: space-between;
+        padding:10px 12%;
         border-top: 1px solid #EFEDEA;
 
         @media(max-width:500px){
             height: auto;
-            padding: 10px 0px;
+            padding: 10px 6%;
         }
         span{
             font-size: 12px;
