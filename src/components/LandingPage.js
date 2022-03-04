@@ -28,6 +28,8 @@ const LandingPage = () => {
     const outerWrappers = gsap.utils.toArray(".outer");
     const innerWrappers = gsap.utils.toArray(".inner");
     const headings = gsap.utils.toArray(".section-heading");
+    const itemsAnimation = gsap.utils.toArray('.second-screen-item')
+    const spanAnimation = gsap.utils.toArray('.span-animation')
     console.log(headings)
     const clamp = gsap.utils.clamp(0, sections.length - 1);
     index = clamp(index); // make sure it's valid
@@ -41,7 +43,7 @@ const LandingPage = () => {
     let fromTop = direction === -1,
       dFactor = fromTop ? -1 : 1,
       tl = gsap.timeline({
-        defaults: { duration: 0.7, ease: "power4.out", delay: 0.25 },
+        defaults: { duration: 0.7, ease: "power4.out"},
         onComplete: () => (animating.current = false),
       });
     if (currentIndex.current >= 0) {
@@ -60,16 +62,77 @@ const LandingPage = () => {
       0
     )
       .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
-      .fromTo(headings[0],  {
-        y: -20,
-        opacity:0,
-      }, {
-        y: 0,
-        opacity:1,
-        duration: 0.5,
-        lazy:false,
-        ease: "ease-in-out"
-      })
+      
+      
+      if(currentIndex.current === 0){
+        tl.fromTo(spanAnimation[0],{
+          y: -20,
+          opacity:0,
+        }, {
+          y: 0,
+          opacity:1,
+          duration:0.3,
+
+          ease: "none"
+        })
+        .fromTo(headings[0],  {
+          x: -20,
+          opacity:0,
+        }, {
+          x: 0,
+          opacity:1,
+  
+          duration:0.3,
+          ease: "none"
+        })
+        
+        itemsAnimation.forEach((element, idx) => {
+          console.log(itemsAnimation[idx])
+          tl.fromTo(itemsAnimation[idx],{
+            y:-10 * (idx + 1),
+            opacity:0
+          },{
+            y:0,
+            opacity:1,
+                        duration:0.3,
+
+            ease: "none"
+          })
+        })
+      }else if(currentIndex.current >= 2) {
+        tl.fromTo(headings[0],  {
+          x: 20,
+          opacity:0,
+        }, {
+          x: 0,
+          opacity:1,
+  
+          duration:0.3,
+          ease: "none"
+        })
+        .fromTo(spanAnimation[0],{
+          x: 20,
+          opacity:0,
+        }, {
+          x: 0,
+          opacity:1,
+  
+          duration:0.3,
+          ease: "none"
+        })
+        itemsAnimation.forEach((element, idx) => {
+          console.log(itemsAnimation[idx])
+          tl.fromTo(itemsAnimation[idx],{
+            y:10 * (idx + 1),
+            opacity:0
+          },{
+            y:0,
+            opacity:1,
+            duration:0.3,
+            ease: "none"
+          })
+        })
+      }
     currentIndex.current = index;
     
 

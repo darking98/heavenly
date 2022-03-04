@@ -8,14 +8,15 @@ const SecondScreen = ({gotoSection}) => {
       button: "Direction #6325, USA",
       rotate: "rotate(5deg)",
       color: "#72ABE2",
-      className:'button-right'
+      className:'button-right ',
     },
     {
       text: "Where to find us",
       button: "Every Sunday 7pm to 8pm",
       rotate: "rotate(-5deg)",
       color: "#E44A3D",
-      className:'button-left'
+      className:'button-left',
+
     },
     {
       text: "Other information",
@@ -31,7 +32,7 @@ const SecondScreen = ({gotoSection}) => {
         <div className="second-screen-container">
           <div style={{width:'100%'}}>
             <div className="second-screen-title">
-              <span>Heavenly Home Gatherings</span>
+              <span className="span-animation">Heavenly Home Gatherings</span>
               <h3 className="section-heading">{`COME & JOIN US\nEVERY WEEKEND`}</h3>
             </div>
             <div>
