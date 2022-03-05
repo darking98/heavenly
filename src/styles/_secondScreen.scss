@@ -44,12 +44,14 @@
             font-size: 60px; 
             text-align: center;
         }
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
             font-size: 30px;
             text-align: center;
           }
       }
       span{
+        display:block;
+        margin-bottom:10px;
         @media (max-width: 1024px) {
             margin-bottom: 20px;
             display: block;
@@ -136,7 +138,15 @@
         position: relative;
       display: flex;
       align-items: center;
-      padding: 15px 25px;
+      padding: 15px 60px;
+      @media (max-width: 1024px) {
+        padding: 15px;
+        padding-left:160px;
+      }
+
+      @media(max-width:600px){
+        padding-left: 15px;
+      }
       //border-top: 1px solid #f4eddc;
       //border-bottom: 1px solid #f4eddc;
       font-size: 18px;
@@ -144,6 +154,7 @@
         display: flex;
         justify-content: center;
         flex: 1;
+        margin-left:20px;
         button {
           border-radius: 40px;
           border: none;
@@ -152,5 +163,12 @@
         }
       }
     }
+  }
+}
+
+.responsive-timer{
+  display:none;
+  @media(max-width:1000px){
+    display:block;
   }
 }

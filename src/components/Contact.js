@@ -4,9 +4,11 @@ import { useForm } from "@formspree/react";
 import * as Yup from "yup";
 import Navbar from './Navbar'
 import Footer from './commonComponents/Footer'
+import Spinner from './commonComponents/Spinner'
 const Contact = () => {
   const [state, handleSubmit] = useForm("mpzbqewp");
 
+  console.log(state)
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -85,8 +87,14 @@ const Contact = () => {
               className="field-error text-danger"
             />
             <button type="submit" className="button-left">
-              Submit
+              {state.submitting ? <Spinner/> : 'Submit'}
             </button>
+            {state.succeeded && (
+              <p className="message-suceeded">Message submited!</p>
+            )}
+            {state.errors.length >= 1 && (
+              <p className="message-failed">{state.errors[0].message}</p>
+            )}
           </Form>
         </Formik>
       </div>

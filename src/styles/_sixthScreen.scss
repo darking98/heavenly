@@ -59,4 +59,12 @@
             transform: rotate(-5deg);
         }
     }
+    .message-succeeded{
+        margin-top:20px;
+        color:$green;
+    }
+    .message-failed{
+        margin-top:20px;
+        color:#dc3545;
+    }
 }
