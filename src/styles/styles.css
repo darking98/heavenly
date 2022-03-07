@@ -1440,4 +1440,39 @@ nav .hamburger-open :nth-child(3n) {
   margin-top: 20px;
   color: #dc3545;
 }
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/metropolis/Metropolis-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/metropolis/Metropolis-Bold.otf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/metropolis/Metropolis-SemiBold.otf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url("../fonts/gotham-rounded/GothamRounded-Book.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url("../fonts/gotham-rounded/GothamRounded-Bold.otf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 /*# sourceMappingURL=styles.css.map */
